@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'Hero';
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url(../fonts/Hero-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'Hero';
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+    src: url(../fonts/Hero-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'Hero';
+    font-weight: bold;
+    font-display: swap;
+    font-style: normal;
+    src: url(../fonts/Hero-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'Comfortaa';
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+    src: url(../fonts/Comfortaa-Light.ttf) format("truetype");
+}
+body {
+    height: 5000px;
+    background: #F9F9F9;
+}
+.header {
+    width:100%;
+    display: flex;
+    align-items: center;
+    height: 150px;
+    background: url(../img/header/polygon-08.svg) left top/contain no-repeat;
+    margin-bottom:62px;
+}
+.header__logo {
+    margin-right: 25px;
+}
+.wrapper {
+    max-width:1430px;
+    padding: 0 15px;
+    margin: auto;
+    flex-grow: 1;
+}
+.header__container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+.link {
+    display: block;
+    font-size:24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.header__menu {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+.menu__link {
+    font-size:0.9em;
+}
+.header__button {
+    margin-left:25px;
+}
+.button__link {
+    width: 250px;
+    padding: 20px 0;
+    font-size: 0.8em;
+    text-align: center;
+    color:#FFF;
+    background: url('../img/header/btn.svg') center/contain no-repeat;
+}
+.main__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 58.33%;
+    row-gap: 55px;
+}
+.main__container {
+    display: flex;
+    position: relative;
+}
+.main {
+    position: relative;
+}
+.main__photo {
+    flex-grow: 1;
+}
+.main__header {
+    font-size: 2.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.main__subheader {
+    font-size:1.3em;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+.main__price {
+    color: #D63131;
+    font-size: 2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+.main__banner {
+    max-width: 595px;
+    font-size: 0.9em;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    padding: 35px 25px;
+    position: relative;
+    background-color: #fff;
+    border: 6px solid #E9E9E9;
+    text-transform: uppercase;
+    font-family: 'Comfortaa','Hero',sans-serif;
+}
+.main__banner::before, .main__banner::after {
+    width:100%;
+    height: 100%;
+    background: url('../img/main/quote.svg') no-repeat;
+    content: ' ';
+    position: absolute;
+}
+.main__banner::before {
+    top:15px;
+    left:-15px;
+}
+.main__banner::after {
+    left: 15px;
+    top: -15px;
+    transform: scale(-1);
+}
+.main__photo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    z-index: 2;
+    height: 725px;
+}
+.main__photo::before {
+    content: ' ';
+    position: absolute;
+    width: 850px;
+    height: 100%;
+    background: url('../img/main/polygon-10.svg') no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    left:-15px;
+    z-index: 1;
+}
+.main__img {
+    z-index: 2;
+}
+.main__contact {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    line-height: 0.9;
+    font-size: 1.25em;
+    padding: 35px 35px;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    background-color: #D63131;
+    row-gap: 15px;
+    border-radius: 0px 10px 0px 0px;
+}
+.main__call-text {
+    font-weight: 600;
+}
+.services {
+    padding: 35px 0 50px 0;
+}
+.services__header {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    color: #D63131;
+    font-size: 1.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 70px;
+}
+.services__header::after {
+    content: '';
+    border-bottom: 2px solid #e4e4e4;
+    flex-grow: 1;
+    height: 100%;
+}
+.services__slider {
+    position: relative;
+    display: flex;
+    column-gap: 25px;
+    padding: 20px 0 45px 10px;
+}
+.services__product {
+    width: 335px;
+    min-height: 285px;
+    position: relative;
+    padding: 25px 30px;
+    border-radius: 30px;
+    background-color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 9px rgb(0, 0, 0, 0.08);
+    text-align: center;
+}
+.services__product::before {
+    left: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 65px;
+    position: absolute;
+    bottom: calc(100% - 31.5px);
+    filter: drop-shadow(-3px -4px 4px rgba(0, 0, 0, 0.04));
+    background: url(../img/services/polygon-06.svg) center/contain no-repeat;
+}
+.product__header {
+    font-weight: 600;
+    font-size:28px;
+    line-height: 1;
+    margin-top:20px;
+}
+.product__subheader {
+    font-size:20px;
+    font-weight: 400;
+    margin-bottom:50px;
+}
+.product__price {
+    font-size:22px;
+    color: #707070;
+    margin-bottom: 25px;
+}
+.price_red {
+    color:#D63131;
+    font-size:38px;
+    font-weight: 600;
+}
+.product__order-button {
+    width: 100%;
+    text-align: center;
+    background:#D63131;
+    margin: auto;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+.product__info-button {
+    font-size: 14px;
+    color: #B4B4B4;
+    text-transform: lowercase;
+}
+.services__nav-button {
+    width: 52px;
+    height: 52px;
+    line-height: 1;
+    color: #9e9e9e;
+    font-size: 40px;
+    border-radius: 9px;
+    position: absolute;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    border: 4px solid #EFEFEF;
+}
+.services__nav-button_prev {
+    left:-5%;
+    top: 35%;
+}
+
+.services__nav-button_next {
+    right: -5%;
+    top: 35%;
+}
