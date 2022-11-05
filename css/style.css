@@ -28,6 +28,7 @@
 }
 body {
     background: #F9F9F9;
+    overflow-x: hidden;
 }
 .header {
     width:100%;
@@ -36,6 +37,9 @@ body {
     height: 150px;
     background: url(../img/header/polygon-08.svg) left top/contain no-repeat;
     margin-bottom:62px;
+}
+.header__burger {
+    display: none;
 }
 .header__logo {
     margin-right: 25px;
@@ -90,6 +94,7 @@ body {
     position: relative;
 }
 .main__photo {
+    position: relative;
     flex-grow: 1;
 }
 .main__header {
@@ -154,10 +159,9 @@ body {
     width: 850px;
     height: 100%;
     background: url('../img/main/polygon-10.svg') no-repeat;
-    background-size: contain;
-    background-position: 100% 100%;
-    left:-15px;
-    z-index: 1;
+    background-size: auto;
+    background-position: left bottom;
+    left: 0;
 }
 .main__img {
     z-index: 2;
@@ -183,8 +187,11 @@ body {
 .main__call-text {
     font-weight: 600;
 }
+.services__container {
+    position: relative;
+}
 .services {
-    padding: 35px 0 50px 0;
+    padding: 35px 0 0px 0;
 }
 .services__header {
     display: flex;
@@ -195,7 +202,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 .services__header::after {
     content: '';
@@ -203,15 +210,22 @@ body {
     flex-grow: 1;
     height: 100%;
 }
+.services__outer-slider {
+    padding: 30px 0 45px 10px;
+    width: 1430px;
+    overflow: hidden;
+    margin: auto;
+}
 .services__slider {
+    width: 1800px;
     position: relative;
     display: flex;
     column-gap: 25px;
-    padding: 20px 0 45px 10px;
+    padding: 20px 0 45px 0px;
 }
 .services__product {
-    width: 335px;
-    min-height: 285px;
+    flex-basis: 275px;
+    height: 285px;
     position: relative;
     padding: 25px 30px;
     border-radius: 30px;
@@ -245,7 +259,7 @@ body {
 .product__price {
     font-size:22px;
     color: #707070;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 .price_red {
     color:#D63131;
@@ -253,7 +267,7 @@ body {
     font-weight: 600;
 }
 .product__order-button {
-    width: 100%;
+    width: 95%;
     text-align: center;
     background:#D63131;
     margin: auto;
@@ -268,6 +282,7 @@ body {
     text-transform: lowercase;
 }
 .services__nav-button {
+    z-index: 2;
     width: 52px;
     height: 52px;
     line-height: 1;
@@ -282,11 +297,11 @@ body {
 }
 .services__nav-button_prev {
     left:-5%;
-    top: 35%;
+    top:52%;
 }
 .services__nav-button_next {
     right: -5%;
-    top: 35%;
+    top: 52%;
 }
 .form {
     background: #d63131;
@@ -374,7 +389,7 @@ body {
     margin-bottom: 70px;
 }
 .instruction__item {
-    width:475px;
+    width:33.3%;
 }
 .instruction__container {
     display: flex;
@@ -428,10 +443,10 @@ body {
     z-index: 2;
     height: 1130px;
     position: relative;
-    padding: 50px;
+    padding: 50px 0;
     background: url('../img/about/bg_statistics.png') no-repeat;
-    background-position: center;
-    background-size: 100% 110%; 
+    background-position: center center;
+    background-size: cover; 
 }
 .about__row {
     display: flex;
@@ -486,7 +501,7 @@ body {
 }
 .about__container::after {
     left: -50px;
-    bottom: -5%;
+    bottom: -5px;
     font-size: 22px;
     color: #1C373C;
     position: absolute;
@@ -496,9 +511,9 @@ body {
 .about__logo {
     position: absolute;
     top:32.5%;
-    left:35%;
-    width:450px;
-    height:450px;
+    left:32.5%;
+    width:500px;
+    height:500px;
     background:#d63131;
     border-radius: 50%;
     display: flex;
@@ -508,7 +523,7 @@ body {
 .about__image {
     position: absolute;
     bottom:0px;
-    left:95px;
+    left:120px;
 }
 .media {
     height: 500px;
@@ -601,13 +616,21 @@ body {
     text-transform: uppercase;
 }
 .clients__container {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+}
+.clients__outer-slider {
+    max-width:2600px;
+    overflow: hidden;
 }
 .clients__slider {
-    width: 80%;
+    position: relative;
+    width: 1144px;
     display: flex;
-    margin: auto;
+    column-gap: 100px;
 }
 .clients__image {
     width:190px;
@@ -631,6 +654,7 @@ body {
 }
 .navigation__button_prev {
     transform: scale(-1);
+    margin-right: 50px;
 }
 .footer {
     background: #d63131;
@@ -657,13 +681,13 @@ body {
     flex-basis: 50%;
 }
 .request__title {
-    width:495px;
+    width:71%;
     font-size: 2em;
     line-height: 1.2;
     margin-bottom: 75px;
 }
 .request__input {
-    width: 460px;
+    width: 67.5%;
     border: none;
     font-size: 1em;
     padding: 7px 15px;

@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="preload" href="./fonts/Hero-Light.ttf" as="font" type="font/ttf">
-    <link rel="preload" href="./fonts/Hero-Regular.ttf" as="font" type="font/ttf">
-    <link rel="preload" href="./fonts/Hero-Bold.ttf" as="font" type="font/ttf">
-    <link rel="preload" href="./fonts/Comfortaa-Light.ttf" as="font" type="font/ttf"> -->
+    <link rel="stylesheet" href="./css/adaptive.css">
     <title>Заказать ведение и настройку контекстной рекламы - ИП Ефимчик Дарья</title>
 </head>
 <body>
@@ -21,13 +18,15 @@
                             <img class="logo__img" src="./img/header/logo.svg" alt="Logo">
                         </a>
                     </div>
-                    <nav class="header__menu menu">
+                    <nav class="header__menu ">
                         <a class="menu__link link" href=".">Контекстная реклама</a>
                         <a class="menu__link link" href=".">SMM</a>
                         <a class="menu__link link" href=".">SEO</a>
                         <a class="menu__link link" href=".">Дизайн</a>
                         <a class="menu__link link" href=".">Контакты</a>
                     </nav>
+                    <div class="header__burger">
+                    </div>
                     <div class="header__button">
                         <a class="button__link link">Заказать звонок</a>
                     </div>
@@ -61,40 +60,49 @@
             <div class="wrapper">
                 <div class="services__container">
                     <h3 class="services__header">Оказываю услуги по</h3>
+                    <div class="services__outer-slider">
+                    <div class="services__slider">
+                        <div class="services__product product">
+                            <div class="product__header">Контекстная</div>
+                            <div class="product__subheader">реклама</div>
+                            <div class="product__price">От <span class="price_red">216 руб</span></div>
+                            <div class="product__order-button">Заказать</div>
+                            <div class="product__info-button">подробнее</div>
+                        </div>
+                        <div class="services__product product">
+                            <div class="product__header">SMM</div>
+                            <div class="product__subheader">продвижение</div>
+                            <div class="product__price">От <span class="price_red">150 руб</span></div>
+                            <div class="product__order-button">Заказать</div>
+                            <div class="product__info-button">подробнее</div>
+                        </div>
+                        <div class="services__product product">
+                            <div class="product__header">SEO</div>
+                            <div class="product__subheader">Продвижение</div>
+                            <div class="product__price">От <span class="price_red">375 руб</span></div>
+                            <div class="product__order-button">Заказать</div>
+                            <div class="product__info-button">подробнее</div>
+                        </div>
+                        <div class="services__product product">
+                            <div class="product__header">Дизайн</div>
+                            <div class="product__subheader">разработка</div>
+                            <div class="product__price">От <span class="price_red">90 руб</span></div>
+                            <div class="product__order-button">Заказать</div>
+                            <div class="product__info-button">подробнее</div>
+                        </div>
+                        <div class="services__product product">
+                            <div class="product__header">Приоритетное</div>
+                            <div class="product__subheader">размещение</div>
+                            <div class="product__price">От <span class="price_red">150 руб</span></div>
+                            <div class="product__order-button">Заказать</div>
+                            <div class="product__info-button">подробнее</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="services__slider">
-                    <div class="services__product product">
-                        <div class="product__header">Контекстная</div>
-                        <div class="product__subheader">реклама</div>
-                        <div class="product__price">От <span class="price_red">150 руб</span></div>
-                        <div class="product__order-button">Заказать</div>
-                        <div class="product__info-button">подробнее</div>
-                    </div>
-                    <div class="services__product product">
-                        <div class="product__header">Контекстная</div>
-                        <div class="product__subheader">реклама</div>
-                        <div class="product__price">От <span class="price_red">150 руб</span></div>
-                        <div class="product__order-button">Заказать</div>
-                        <div class="product__info-button">подробнее</div>
-                    </div>
-                    <div class="services__product product">
-                        <div class="product__header"></div>
-                        <div class="product__subheader"></div>
-                        <div class="product__price"></div>
-                        <div class="product__order-button"></div>
-                        <div class="product__order__info-button"></div>
-                    </div>
-                    <div class="services__product product">
-                        <div class="product__header"></div>
-                        <div class="product__subheader"></div>
-                        <div class="product__price"></div>
-                        <div class="product__order-button"></div>
-                        <div class="product__order__info-button"></div>
-                    </div>
-                  <button class="services__nav-button services__nav-button_prev" id="prev-button"><</button>
-                  <button class="services__nav-button services__nav-button_next" id="next-button">></button>
-                </div>
+                <button class="services__nav-button services__nav-button_prev" id="prev-button"><</button>
+                <button class="services__nav-button services__nav-button_next" id="next-button">></button>
             </div>
+        </div>
         </section>
         <section class="form">
             <div class="wrapper">
@@ -244,7 +252,9 @@
             </div>
         </section>
         <section class="action">
-            <a class="action__button">Получить предложение</a>
+            <div class="wrapper">
+                <a class="action__button">Получить предложение</a>
+            </div>
         </section>
         <section class="clients">
                 <div class="wrapper">
@@ -252,26 +262,28 @@
                     <div class="clients__container">
                         <button class="navigation__button navigation__button_prev" disabled>
                         </button>
-                        <div class="clients__slider">
-                        <div class="clients__item">
-                            <img class="clients__image" src="./img/clients/client01.jpg" alt="Клиент 1">
+                        <div class="clients__outer-slider">
+                            <div class="clients__slider">
+                                <div class="clients__item">
+                                    <img class="clients__image" src="./img/clients/client01.jpg" alt="Клиент 1">
+                                </div>
+                                <div class="clients__item">
+                                    <img class="clients__image" src="./img/clients/client02.jpg" alt="Клиент 2">
+                                </div>
+                                <div class="clients__item">
+                                    <img class="clients__image" src="./img/clients/client03.jpg" alt="Клиент 3">
+                                </div>
+                                <div class="clients__item">
+                                    <img class="clients__image" src="./img/clients/client04.jpg" alt="Клиент 4">
+                                </div>
+                                <div class="clients__item">
+                                    <img class="clients__image" src="./img/clients/client05.jpg" alt="Клиент 5">
+                                </div>
+                                <div class="clients__item">
+                                    <img class="clients__image" src="./img/clients/client05.jpg" alt="Клиент 6">
+                                </div>
+                            </div>
                         </div>
-                        <div class="clients__item">
-                            <img class="clients__image" src="./img/clients/client02.jpg" alt="Клиент 2">
-                        </div>
-                        <div class="clients__item">
-                            <img class="clients__image" src="./img/clients/client03.jpg" alt="Клиент 3">
-                        </div>
-                        <div class="clients__item">
-                            <img class="clients__image" src="./img/clients/client04.jpg" alt="Клиент 4">
-                        </div>
-                        <div class="clients__item">
-                            <img class="clients__image" src="./img/clients/client05.jpg" alt="Клиент 5">
-                        </div>
-                        <div class="clients__item">
-                            <img class="clients__image" src="./img/clients/client05.jpg" alt="Клиент 6">
-                        </div>
-                    </div>
                         <button class="navigation__button navigation__button_next">
                         </button>
                     </div>
