@@ -452,6 +452,7 @@ body {
     cursor: pointer;
 }
 .product__info-button {
+    z-index: 7;
     cursor: pointer;
     font-size: 14px;
     color: #B4B4B4;
@@ -513,6 +514,7 @@ body {
     column-gap: 30px;
     width:70%;
     margin: auto;
+    z-index: 2;
 }
 .form__text-input {
     padding: 7px 15px;
@@ -521,6 +523,8 @@ body {
     font-size:1em;
     line-height: 1.6;
     flex-grow: 1;
+    z-index: 2;
+    outline: none;
 }
 .form__text-input::placeholder {
     color:#C5C5C5;
@@ -547,6 +551,7 @@ body {
     content: 'efimchik';
     color: rgba(255,255,255,.07);
     transform: translate(-50%,-50%);
+    z-index: 1;
 }
 .form::after {
     bottom: 0;
@@ -832,6 +837,7 @@ body {
 }
 .media__document {
     cursor: pointer;
+    z-index: 5;
 }
 .document__img {
     width: 175px;
@@ -877,6 +883,7 @@ body {
     text-transform: uppercase;
     background: url('../img/header/btn.svg') no-repeat;
     background-size: contain;
+    cursor: pointer;
 }
 .clients {
     padding: 50px 0;
@@ -945,6 +952,7 @@ body {
     color: #FFF;
 }
 .footer__container::before {
+    z-index: 1;
     top: 50%;
     left: 50%;
     font-size: 24vw;
@@ -957,6 +965,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
+    z-index: 2;
 }
 .request__title {
     width:71%;
@@ -972,6 +981,8 @@ body {
     background-color: transparent;
     border-bottom: 2px solid #fff;
     margin-bottom: 5px;
+    outline: none;
+    color: #fff;
 }
 .request__input::placeholder {
     color: #FFF;
@@ -987,6 +998,7 @@ body {
     padding: 15px 30px;
     background-color: #fff;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .contacts {
     flex-basis: 50%;
@@ -994,6 +1006,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 50px;
+    z-index: 2;
 }
 .contacts__title {
     font-size: 1.4em;
@@ -1078,6 +1091,8 @@ body {
     display: flex;
     box-shadow: 9px 11px 20px 0 rgb(0 0 0 / 16%);
     border-radius: 21.4px;
+    background: #FFF;
+    position: relative;
 }
 .modal__decor {
     position: relative;
@@ -1179,4 +1194,40 @@ body {
     cursor: pointer;
     position: absolute;
     background-color: #fff;
+}
+.form-modal {
+    opacity: 1;
+    top: 200px;
+    z-index: 5;
+    color: #fff;
+    right: 0px;
+    padding: 15px;
+    position: fixed;
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 300px;
+    line-height: 1.2;
+    padding-left: 45px;
+    visibility: visible;
+    transition: .25s ease;
+    list-style-type: disc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-shadow: 1px 1px 2px #000000ab;
+    box-shadow: -2px 4px 8px rgb(0 0 0 / 19%);
+    background: #e53935;
+}
+.form-modal_success {
+    background: #50C878;
+}
+.form-modal_hidden {
+    visibility: hidden;
+    opacity: 0;
+    right: -300px;
+}
+.form-modal__item {
+    display: list-item;
+}
+.form-modal__item_hidden {
+    display: none;
 }

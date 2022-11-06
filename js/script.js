@@ -111,15 +111,14 @@ rightButtonClientsSlider.addEventListener('click', () => {
     }
 })
 
-// window.addEventListener('resize', () => {
-//   marginClientsSlider = 0;
-//   leftButtonClientsSlider.disabled = true;
-//   rightButtonClientsSlider.disabled = false;
-//   clientsSlider.style.left = -marginClientsSlider + 'px';
-// })
+window.addEventListener('resize', () => {
+  marginClientsSlider = 0;
+  leftButtonClientsSlider.disabled = true;
+  rightButtonClientsSlider.disabled = false;
+  clientsSlider.style.left = -marginClientsSlider + 'px';
+})
 
 const showModal = () => {
-  console.log('тут');
   document.querySelector('.modal').classList.remove('modal_hidden');
   document.body.classList.add('body_scroll_disable');
   document.body.classList.remove('body_scroll_enable');
@@ -129,3 +128,42 @@ const hideModal = () => {
   document.body.classList.add('body_scroll_enable');
   document.body.classList.remove('body_scroll_disable');
 }
+const formSubmit = document.querySelector('.form__submit');
+const nameForm = document.querySelector('.form__text-input_name');
+const phoneForm = document.querySelector('.form__text-input_phone');
+const errorForm = document.querySelector('.form-modal');
+const requestSubmit = document.querySelector('.request__submit');
+const nameRequest = document.querySelector('.request__input_name');
+const phoneRequest = document.querySelector('.request__input_phone');
+const notices = errorForm.children[0];
+
+const showError = (name, phone) => {
+  name.value ? notices.children[0].classList.add('form-modal__item_hidden') : notices.children[0].classList.remove('form-modal__item_hidden');
+  phone.value ?  notices.children[1].classList.add('form-modal__item_hidden') :  notices.children[1].classList.remove('form-modal__item_hidden');
+  notices.children[2].classList.add('form-modal__item_hidden');
+  errorForm.classList.remove('form-modal_success');
+  errorForm.classList.remove('form-modal_hidden');
+  setTimeout(() => errorForm.classList.add('form-modal_hidden'), 2500);
+}
+const showSucces = () => {
+  notices.children[0].classList.add('form-modal__item_hidden');
+  notices.children[1].classList.add('form-modal__item_hidden');
+  notices.children[2].classList.remove('form-modal__item_hidden');
+  errorForm.classList.add('form-modal_success');
+  errorForm.classList.remove('form-modal_hidden');
+  setTimeout(() => errorForm.classList.add('form-modal_hidden'), 2500);
+}
+formSubmit.addEventListener('click', () => {
+  if(!nameForm.value || !phoneForm.value) showError(nameForm, phoneForm);
+  else showSucces();
+});
+requestSubmit.addEventListener('click', () => {
+  if(!nameRequest.value || !phoneRequest.value) showError(nameRequest, phoneRequest);
+  else showSucces();
+})
+phoneForm.addEventListener('input', () => {
+   phoneForm.value = phoneForm.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');
+})
+phoneRequest.addEventListener('input', () => {
+  phoneRequest.value = phoneRequest.value.replace(/[^0-9]/g, '').replace(/(\..*?)\..*/g, '$1');
+})

@@ -96,35 +96,35 @@
                             <div class="product__header">Контекстная</div>
                             <div class="product__subheader">реклама</div>
                             <div class="product__price">От <span class="price_red">216 руб</span></div>
-                            <div class="product__order-button">Заказать</div>
+                            <div class="product__order-button" onclick="showModal()">Заказать</div>
                             <div class="product__info-button">подробнее</div>
                         </div>
                         <div class="services__product product">
                             <div class="product__header">SMM</div>
                             <div class="product__subheader">продвижение</div>
                             <div class="product__price">От <span class="price_red">150 руб</span></div>
-                            <div class="product__order-button">Заказать</div>
+                            <div class="product__order-button" onclick="showModal()">Заказать</div>
                             <div class="product__info-button">подробнее</div>
                         </div>
                         <div class="services__product product">
                             <div class="product__header">SEO</div>
                             <div class="product__subheader">Продвижение</div>
                             <div class="product__price">От <span class="price_red">375 руб</span></div>
-                            <div class="product__order-button">Заказать</div>
+                            <div class="product__order-button" onclick="showModal()">Заказать</div>
                             <div class="product__info-button">подробнее</div>
                         </div>
                         <div class="services__product product">
                             <div class="product__header">Дизайн</div>
                             <div class="product__subheader">разработка</div>
                             <div class="product__price">От <span class="price_red">90 руб</span></div>
-                            <div class="product__order-button">Заказать</div>
+                            <div class="product__order-button" onclick="showModal()">Заказать</div>
                             <div class="product__info-button">подробнее</div>
                         </div>
                         <div class="services__product product">
                             <div class="product__header">Приоритетное</div>
                             <div class="product__subheader">размещение</div>
                             <div class="product__price">От <span class="price_red">150 руб</span></div>
-                            <div class="product__order-button">Заказать</div>
+                            <div class="product__order-button" onclick="showModal()">Заказать</div>
                             <div class="product__info-button">подробнее</div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                 <h3 class="form__header">Оставить заявку</h3>
                 <div class="form__container">
                     <input type="text" class="form__text-input form__text-input_name" placeholder="Имя *">
-                    <input type="text" class="form__text-input form__text-input_phone" placeholder="Телефон *">
+                    <input type="text" class="form__text-input form__text-input_phone" placeholder="Телефон *" oninput="">
                     <input type="submit" class="form__submit">
                 </div>
             </div>
@@ -273,7 +273,6 @@
                     <div class="media__video video">
                         <div class="video__play-button"></div>
                         <video class="video__source" src="./img/media/efimchik.mp4" poster="./img/media/efimchik-preview.jpg" muted></video>
-                        <!-- <video class="studio__video lazyloading" data-src="video/efimchik.mp4" preload="metadata" poster="img/video/efimchik-preview.jpg" muted="" src="video/efimchik.mp4"></video> -->
                     </div>
                     <div class="media__document document">
                         <img class="document__img" src="./img/media/sertificate_img-02.jpg">
@@ -284,7 +283,7 @@
         </section>
         <section class="action">
             <div class="wrapper">
-                <a class="action__button">Получить предложение</a>
+                <a class="action__button" onclick="showModal()">Получить предложение</a>
             </div>
         </section>
         <section class="clients">
@@ -325,8 +324,8 @@
                 <div class="footer__container">
                     <div class="request">
                         <div class="request__title">Дарья Ефимчик ежедневно на связи</div>
-                        <input type="text" class="request__input" placeholder="Имя *">
-                        <input type="text" class="request__input" placeholder="Телефон *">
+                        <input type="text" class="request__input request__input_name" placeholder="Имя *">
+                        <input type="text" class="request__input request__input_phone" placeholder="Телефон *">
                         <button class="request__submit">Отправить</button>
                     </div>
                     <div class="contacts">
@@ -374,9 +373,16 @@
                     <input type="text" class="modal__input" placeholder="Email">
                     <div class="modal__info">* Нажимая кнопку, Вы даёте согласие на обработку своих персональных данных</div>
                     <div class="modal__submit">Заказать звонок</div>
-                    <div class="modal__close" onclick="hideModal()"></div>
                 </div>
+                <div class="modal__close" onclick="hideModal()"></div>
             </div>
+        </div>
+        <div class="form-modal form-modal_hidden">
+            <ul>
+                <li class="form-modal__item">Имя - обязательно</li>
+                <li class="form-modal__item">Телефон - обязателен</li>
+                <li class="form-modal__item_hidden">Заявка отправлена</li>
+            </ul>
         </div>
         <script src='./js/script.js'></script> 
 </body>
