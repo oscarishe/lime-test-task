@@ -164,6 +164,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     border-bottom: 4px solid rgb(245, 245, 245);
+    cursor: pointer;
 }
 .mobile-menu__button {
     width: 230px;
