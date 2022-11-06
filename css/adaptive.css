@@ -103,16 +103,46 @@
         display: none;
     }
     .header {
-        background: none;
+        background-image: none;
     }
     .header__container {
         justify-content: space-between;
     }
     .header__logo {
+        display: flex;
         position: relative;
-        margin-left: 80px;
+        margin-left: 40px;
+        column-gap: 25px;
     }
-    .header__logo::before {
+    .header__burger {
+        width: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        row-gap: 8px;
+        cursor: pointer;
+    }
+    .header__burger div:first-child {
+        width: 55px;
+        height: 3px;
+        background: #D63131;
+    }
+    .header__burger div:last-child {
+        width: 27.5px;
+        height: 3px;
+        background: #D63131;
+    }
+    .header__burger div:nth-child(2) {
+        width: 55px;
+        height: 3px;
+        background: #D63131;
+    }
+    .logo__img {
+        width: 125px;
+        height: 31.2px;
+    }
+    /* .header__burger::before {
+        cursor: pointer;
         position: absolute;
         left: -80px;
         content: ' ';
@@ -121,7 +151,8 @@
         border-top:3px solid #D63131;
         border-bottom: 3px solid #D63131;
     }
-    .header__logo::after {
+    .header__burger::after {
+        cursor: pointer;
         position: absolute;
         left: -52.5px;
         top: 25px;
@@ -129,7 +160,7 @@
         width: 27.5px;
         height: 10px;
         border-top:3px solid #D63131;
-    }
+    } */
     .media__document, .media__document:last-child {
         display: none;
     }
@@ -246,6 +277,13 @@
     }
     .about .wrapper {
         width:90vw;
+    }
+    .form__header::before {
+        display: none;
+    }
+    .form__header {
+        justify-content: center;
+        margin-bottom: 30px;
     }
     .services__nav-button_prev {
         left:-60px;
@@ -386,7 +424,7 @@
     .instruction__container {
         column-gap: 25px;
     }
-    .instruction__item:nth-child(2) .item__head {
+    .instruction__item:nth-child(3) .item__head {
         column-gap: 15px;
     }
     .header__button {
@@ -409,5 +447,11 @@
     }
     .about__row:nth-child(3) .about__item {
         margin-left: 15px;
+    }
+    .request__submit {
+        max-width: 55%;
+    }
+    .phone-window__link {
+        font-size: 1.15em;
     }
 }

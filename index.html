@@ -9,26 +9,56 @@
     <link rel="stylesheet" href="./css/adaptive.css">
     <title>Заказать ведение и настройку контекстной рекламы - ИП Ефимчик Дарья</title>
 </head>
-<body>
+<body class="body body_scroll_enable">
         <header class="header">
+            <div class="mobile-menu mobile-menu_hidden">
+                <div class="mobile-menu__header">
+                    <a href="" class="mobile-menu__link">
+                        <img class="mobile-menu__logo" src="./img/header/logo.svg" alt="">
+                    </a>
+                    <div class="mobile-menu__close-button"></div>
+                </div>
+                <nav class="mobile-menu__container">
+                    <div class="mobile-menu__item">Контекстная реклама</div>
+                    <div class="mobile-menu__item">SMM</div>
+                    <div class="mobile-menu__item">SEO</div>
+                    <div class="mobile-menu__item">Дизайн</div>
+                    <div class="mobile-menu__item">Контакты</div>
+                </nav>
+                    <a class="mobile-menu__button link" href="">Заказать звонок</a>
+                <div class="mobile-menu__footer">
+                    <a class="mobile-menu__contact" href="tel:+375445671760">+375 (44) 567-17-60</a>
+                    <a class="mobile-menu__contact mobile-menu__contact_vb" href="viber://chat?number=%2B375445671760"></a>
+                    <a class="mobile-menu__contact mobile-menu__contact_tg" href="https://telegram.me/efimchikstudio"></a>
+                </div>
+            </div>
+            <div class="phone-window phone-window_hidden">
+                <a href="tel:+375445671760" class="phone-window__link">+375 (44) 567-17-60</a>
+            </div>
+            <a href="#" class="up-link up-link_hidden">^</a>
             <div class="wrapper">
                 <div class="header__container">
                     <div class="logo header__logo">
+                        <div class="header__burger">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                         <a class="logo__link link" href="./index.html">
                             <img class="logo__img" src="./img/header/logo.svg" alt="Logo">
                         </a>
                     </div>
                     <nav class="header__menu ">
-                        <a class="menu__link link" href=".">Контекстная реклама</a>
-                        <a class="menu__link link" href=".">SMM</a>
-                        <a class="menu__link link" href=".">SEO</a>
-                        <a class="menu__link link" href=".">Дизайн</a>
-                        <a class="menu__link link" href=".">Контакты</a>
+                        <a class="menu__link link" href="#">Контекстная реклама</a>
+                        <a class="menu__link link" href="#">SMM</a>
+                        <a class="menu__link link" href="#">SEO</a>
+                        <a class="menu__link link" href="#">Дизайн</a>
+                        <a class="menu__link link" href="#">Контакты</a>
                     </nav>
                     <div class="header__burger">
                     </div>
                     <div class="header__button">
-                        <a class="button__link link">Заказать звонок</a>
+                        <a class="button__link link" onclick="showModal()">Заказать звонок</a>
                     </div>
                 </div>
             </div>
@@ -52,7 +82,7 @@
                 </div>
             </div>
             <a class="main__contact">
-                <div class="main__call-text">Заказать звонок</div>
+                <div class="main__call-text" onclick="showModal()">Заказать звонок</div>
                 <div>+375 (44) 567-17-60</div>
             </a>
         </section>
@@ -132,6 +162,18 @@
                             <div class="item__descr">Заполните форму на или позвоните на номер указанный на сайте.</div>
                         </div>
                     </div>
+                    <div class="instruction__item">
+                        <div class="item__head">
+                            <div class="item__dot"></div>
+                            <div class="item__dot"></div>
+                            <div class="item__dot"></div>
+                            <div class="item__dot item__dot_big">3</div>
+                        </div>
+                        <div class="item__info">
+                            <div class="item__title">Начало работы</div>
+                            <div class="item__descr">Заключите договор, сделайте предоплату и получите настроенную рекламную кампанию в течение 1-3 рабочих дней</div>
+                        </div>
+                    </div>
                     <div class="instruction__item item">
                         <div class="item__head">
                             <div class="item__dot"></div>
@@ -145,18 +187,6 @@
                         <div class="item__info">
                             <div class="item__title">Коммерческое предложение</div>
                             <div class="item__descr">Получите коммерческое предложение согласно вашим требованиям.</div>
-                        </div>
-                    </div>
-                    <div class="instruction__item">
-                        <div class="item__head">
-                            <div class="item__dot"></div>
-                            <div class="item__dot"></div>
-                            <div class="item__dot"></div>
-                            <div class="item__dot item__dot_big">3</div>
-                        </div>
-                        <div class="item__info">
-                            <div class="item__title">Начало работы</div>
-                            <div class="item__descr">Заключите договор, сделайте предоплату и получите настроенную рекламную кампанию в течение 1-3 рабочих дней</div>
                         </div>
                     </div>
                 </div>
@@ -241,6 +271,7 @@
                         <div class="document__text document__text_left">Google сертификат</div>
                     </div>
                     <div class="media__video video">
+                        <div class="video__play-button"></div>
                         <video class="video__source" src="./img/media/efimchik.mp4" poster="./img/media/efimchik-preview.jpg" muted></video>
                         <!-- <video class="studio__video lazyloading" data-src="video/efimchik.mp4" preload="metadata" poster="img/video/efimchik-preview.jpg" muted="" src="video/efimchik.mp4"></video> -->
                     </div>
@@ -287,12 +318,6 @@
                         <button class="navigation__button navigation__button_next">
                         </button>
                     </div>
-                    <!-- <div class="clients__navigation navigation">
-                        <button class="navigation__button navigation__button_prev">
-                        </button>
-                        <button class="navigation__button navigation__button_next">
-                        </button>
-                    </div> -->
                 </div>
         </section>
         <footer class="footer">
@@ -335,6 +360,24 @@
                     <img class="develop__img" src="./img/footer/creator.svg" alt="Lime Media">
                 </a>
             </div>
-        </footer> 
+        </footer>
+        <div class="modal modal_hidden">
+            <div class="modal__container">
+                <div class="modal__decor">
+                    <img src="./img/modal/modal-call.svg" alt="" class="modal__img">
+                </div>
+                <div class="modal__form">
+                    <div class="modal__header">Заказать звонок</div>
+                    <div class="modal__subheader">ОСТАВЬТЕ ЗАЯВКУ И НАШ СПЕЦИАЛИСТ СВЯЖЕТСЯ С ВАМИ В БЛИЖАЙШЕЕ ВРЕМЯ!</div>
+                    <input type="text" class="modal__input" placeholder="Имя *">
+                    <input type="text" class="modal__input" placeholder="Телефон *">
+                    <input type="text" class="modal__input" placeholder="Email">
+                    <div class="modal__info">* Нажимая кнопку, Вы даёте согласие на обработку своих персональных данных</div>
+                    <div class="modal__submit">Заказать звонок</div>
+                    <div class="modal__close" onclick="hideModal()"></div>
+                </div>
+            </div>
+        </div>
+        <script src='./js/script.js'></script> 
 </body>
 </html>
